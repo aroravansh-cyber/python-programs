@@ -18,9 +18,25 @@ print("""                                         YOU NEED TO ENTER OPTION BETWE
                                                                 11. Clear History
                                                                 12. Exit
 """)
-
 def input_main(name):
+    print(name)
     rows = int(input("ENTER THE NUMBER OF ROWS:"))  #taking number of rows from user
     column = int(input("ENTER THE NUMBER OF COLUMNS: "))    #taking number of column from user
     print("YOU WANT SOLUTION OF ",rows,"X",column)
-    
+    matrix=[]
+    print("ENTER THE ELEMENTS OF MATIX")
+    for i in range(rows):
+        row=[]
+        for j in range(column):
+            value=float(input(f"Enter the the element {i+1}{j+1}"))
+            row.append(value)
+        matrix.append(row)
+    return matrix
+matrix_a=input_main("MATRIX A")
+matrix_b=input_main("MATRIX B")
+def additon_matrix(matrix_a,matrix_b):
+def display_matrix(matrix,name):
+    print("YOUR",name,"is:")
+    for row in matrix:
+        print(row)
+
