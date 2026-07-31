@@ -11,13 +11,26 @@ def pyramid(s): #function of pyramid pattern choice 4
     for i in range(1,s+1):
         print(" "*(s-i),"*"*(2*i-1))
 def diamond(s): #function of diamond pattern choice 5
-    for i in range(1,s+1):
+    for i in range(1,s):
         print(" "*(s-i),"*"*(2*i-1))
     for i in range(s-1,0,-1):
         print(" "*(s-i),"*"*(2*i-1))
-      
-while True:
-    print(""" ENTER PATTERN TYPE
+def numberpattern(s):
+      num=1
+      for i in range(1,s+1):
+            for j in range(i):
+                print(num," ",end="")
+                num+=1      
+            print()    
+def floydspattern():
+      num=1
+      for i in range(1,s+1):
+            for j in range(i):
+                  print(num,"*")
+                  num+=1
+                print()
+            
+print(""" ENTER PATTERN TYPE
                 1. Square Pattern
                 2. Right Triangle Pattern
                 3. Left Angle Triangle Pattern
@@ -39,16 +52,17 @@ while True:
                 18. Hourglass Pattern
                 19. Right Pascal
                 20. Inverted Pyramid
+                21. Exit
     """)
-    choice=int(input("ENTER YOUR CHOICE"))
+        choice=int(input("ENTER YOUR CHOICE"))
     if choice == 1:
-        s=int(input("enter the size of square:"))
+        s=int(input("ENTER THE SIZE OF QUARE:"))
         square(s)
     elif choice == 2:
-        s=int(input("enter the size of right triangle:"))
+        s=int(input("ENTER THE SIZE OF RIGHT ANGLE TRIANGLE:"))
         righttriangle(s)
     elif choice == 3:
-        s=int(input("enter the size of inverted tiangle:"))
+        s=int(input("ENTER THE SIZE OF INVERTED TRIANGLE:"))
         inverttriangle(s)
     elif choice == 4:
         s=int(input("ENTER THE SIZE OF PYRAMID:"))
@@ -57,8 +71,8 @@ while True:
         s=int(input("ENTER THE SIZE OF DIAMOND:"))
         diamond(s)
     elif choice == 6:
-            s=int(input("ENTER THE SIZE OF PYRAMID:"))
-            pyramid(s)
+        s=int(input("ENTER THE SIZE OF NUMBER PATTERN:"))
+        numberpattern(s)
     elif choice == 7:
             s=int(input("ENTER THE SIZE OF PYRAMID:"))
             pyramid(s)
