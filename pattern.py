@@ -230,7 +230,6 @@ while True:
 21. Inverted Pyramid
 22. Exit
 
-==================================================
 """)
 
     choice = int(input("ENTER YOUR CHOICE: "))
@@ -306,5 +305,3 @@ while True:
 
     else:
         print("INVALID OPTION.")
-
-    print("\n" + "=" * 50)
